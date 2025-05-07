@@ -23,4 +23,4 @@ def iniciar():
  if entrada1 in entrada2:
   print("Coincidencia detectada.") # Error intencional de indentación
 iniciar()
-#Los errores solo eran de espacios
+#Los errores solo eran de espacioss
