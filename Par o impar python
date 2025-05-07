@@ -1,0 +1,15 @@
+numero = int(input("Ingrese un número entero: "))  # Error 4 corregido: convertir a entero
+if numero % 2 == 0:  # Error 1 corregido: usar '==', no '=' y cerrar con ':'
+    print("El número es par.")
+else:
+    print("El número es impar.")
+
+cantidad = int(input("¿Cuántos números pares desea ver?: "))
+contador = 0
+i = 1
+while contador < cantidad:  # Error 2 corregido: agregar ':'
+    if i % 2 == 0:
+        print("Par número", contador + 1, ":", i)  
+        contador += 1
+    i += 1
+    #convertir a entero usar == y poner :linea 10 terminar con : linea 12 separar con comas
