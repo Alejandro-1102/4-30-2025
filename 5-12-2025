@@ -1,25 +1,25 @@
-numero = int(input("Ingresa la base: "))
-numero1 = int(input("Ingresa la altura: "))
-area = (numero * numero1) / 2
-print(f"El area del triangulo es: {area}")
-if area >= 100:
-    print("El area es grande")
-elif area < 100:
-    print("El area es pequeña")
-print("Quieres calcular el area de otro triangulo? (si/no)")
-while True:
-    respuesta = input("Respuesta: ")
-    if respuesta.lower() == "si":
-        numero = int(input("Ingresa la base: "))
-        numero1 = int(input("Ingresa la altura: "))
-        area = (numero * numero1) / 2
-        print(f"El area del triangulo es: {area}")
-        if area >= 100:
-            print("El area es grande")
-        elif area < 100:
-            print("El area es pequeña")
-    elif respuesta.lower() == "no":
-        break
-    else:
-        print("Respuesta no válida. Por favor, responde 'si' o 'no'.")
+import tkinter as tk
+def multiplicar():
+    num1 = entrada.get()
+    num2 = entrada1.get()
+    etiqueta_resultado.config(text=f"El area del triangulo es: {int(num1) * int(num2) /2}")
+ventana = tk.Tk()
+ventana.title("Area del triangulo")
+ventana.geometry("400x200")
+etiqueta = tk.Label(ventana, text="Ingresa la base:")
+etiqueta.pack()
+entrada = tk.Entry(ventana)
+entrada.pack()
+etiqueta1 = tk.Label(ventana, text="Ingresa la altura:")
+etiqueta1.pack()
+entrada1 = tk.Entry(ventana)
+entrada1.pack()
+boton = tk.Button (text="calcular area", command=multiplicar)
+boton.pack()
+boton = tk.Button (text="salir de la app", command=ventana.quit)
+boton.pack()
+etiqueta_resultado = tk.Label (ventana, text="")
+etiqueta_resultado.pack()
+ventana.mainloop()
+
         
