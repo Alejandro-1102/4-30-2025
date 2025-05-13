@@ -1,21 +1,25 @@
-num1 = float(input("Ingrese el primer número: "))
-num2 = float(input("Ingrese el segundo número: "))
-operacion = input("Seleccione la operación (+, -, *, /): ")
-
-if operacion == '+':
-            resultado = num1 + num2
-            print(f"Resultado: {resultado:.2f}")
-elif operacion == '-':
-            resultado = num1 - num2
-            print(f"Resultado: {resultado:.2f}")
-elif operacion == '*':
-            resultado = num1 * num2
-            print(f"Resultado: {resultado:.2f}")
-elif operacion == '/':
-            if num2 != 0:
-                resultado = num1 / num2
-                print(f"Resultado: {resultado:.2f}")
-            else:
-                print("Error: No se puede dividir entre cero.")
-else:
-            print("Operación no válida.")
+numero = int(input("Ingresa la base: "))
+numero1 = int(input("Ingresa la altura: "))
+area = (numero * numero1) / 2
+print(f"El area del triangulo es: {area}")
+if area >= 100:
+    print("El area es grande")
+elif area < 100:
+    print("El area es pequeña")
+print("Quieres calcular el area de otro triangulo? (si/no)")
+while True:
+    respuesta = input("Respuesta: ")
+    if respuesta.lower() == "si":
+        numero = int(input("Ingresa la base: "))
+        numero1 = int(input("Ingresa la altura: "))
+        area = (numero * numero1) / 2
+        print(f"El area del triangulo es: {area}")
+        if area >= 100:
+            print("El area es grande")
+        elif area < 100:
+            print("El area es pequeña")
+    elif respuesta.lower() == "no":
+        break
+    else:
+        print("Respuesta no válida. Por favor, responde 'si' o 'no'.")
+        
